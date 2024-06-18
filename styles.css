@@ -1,0 +1,597 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    background: #445D48;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19.2px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container  {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.Logo {
+   position: fixed;
+   height: auto;
+   left: 0px;
+   width: 250px;
+   cursor: pointer;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 16px;
+    height: 100%;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background:  #ffffff;
+    color: #445D48;
+}
+
+.button:hover {
+    background: #5e3023;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #5e3023;
+    transition: all 0.3s ease;
+}
+
+/*------------------- Media -------------------------*/
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #445D48;
+    }
+
+    .navbar__menu.active {
+        background: #445D48;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 25.6px;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #ffffff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 32px;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Home Section CSS */
+.main {
+    background-color: #ffffff;   
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 80vh;
+    background-color: #ffffff;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content h1 {
+    font-size: 64px;
+    background-color: #ffffff;
+    background:#445D48;
+    background-size: 100%;
+    background-clip: text;;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content h2 {
+    font-size: 64px;
+    background-color: #5E3023;
+    background-image: linear-gradient(to top, #445d48 0%, #d6cc99 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;;
+}
+
+/* Big Button Book Now */
+.main__btn {
+    font-size: 16px;
+    background: #445D48;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    margin-top: 32px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.main__btn::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #5E3023;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main__btn:hover {
+    color: #ffffff;
+}
+
+.main__btn:hover::after {
+    width: 100%;
+}
+
+/* Weather Box */
+.weather-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px #445D48;
+    width: 80%; 
+    max-width: 500px;
+    text-align: center;
+}
+
+#weather-forecast {
+    margin-top: 20px;
+}
+
+.forecast-item {
+    margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+    .main {
+        width: 90%;
+    }
+}
+
+/* Play Section CSS */
+.play__container {
+    width: 100%;
+    max-width: 1300px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    color: #445D48;
+    min-height: 80vh;
+}
+
+.play__section {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1300px;
+    text-align: justify;
+}
+
+.play__section h1 {
+    color: #445D48;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.play__section p, .play__section ul {
+    color: #445D48;
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #445D48;
+    text-align: center;
+}
+
+th {
+    background-color: #445D48;
+    color: #ffffff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    .play__container {
+        width: 90%;
+    }
+}
+
+/* Learn Section CSS */
+.Learn {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}
+
+.Learn h1 {
+    position: absolute;
+    top: 350px;
+    left: 30px;
+}
+
+.Learn__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Learn__card {
+    margin: 16px;
+    height: 525px;
+    width: 400px;
+    border-radius: 4px;
+    background-image: url('/images/oneonone.jpg');
+    background-size: cover;
+    position: relative;
+    color: #ffffff;
+}
+
+.Learn__card:nth-child(2) {
+    background-image: url('/images/ladiesclinic.JPG');
+}
+
+.Learn h2 {
+    position: absolute;
+    top: 350px;
+    left: 30px;
+}
+
+.Learn__card p {
+    position: absolute;
+    top: 400px;
+    left: 30px;
+}
+
+.Learn__card button {
+    color: #445D48;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #ffffff;
+    position: absolute;
+    top: 440px;
+    left: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Learn__card:hover {
+    transform: scale(1.075);
+    transition: 0.2 ease-in;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+    .Learn {
+        height: 1600px;
+    }
+
+    .Learn h1 {
+        font-size: 32px;
+        margin-top: 192px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Learn {
+        height: 1400px;
+    }
+
+    .Learn h1 {
+        font-size: 19.2px;
+    }
+
+    .Learn__card {
+        width: 300px;
+    }
+}
+
+/* Contact CSS */
+.contact-section {
+    padding: 20px;
+    background-color: #fff;
+    color: #445D48;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info,
+.opening-hours,
+.terms {
+    margin-bottom: 20px;
+}
+
+.contact-info h3,
+.opening-hours h3,
+.terms h3 {
+    margin-bottom: 10px;
+}
+
+.contact-info ul,
+.opening-hours ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li,
+.opening-hours li {
+    margin-bottom: 10px;
+}
+
+.contact-info li strong,
+.opening-hours li strong {
+    font-weight: bold;
+}
+
+.contact-info li a {
+    color: #445D48;
+    text-decoration: none;
+}
+
+.contact-info li a:hover {
+    text-decoration: underline;
+}
+
+.contact-section {
+    float: left;
+    width: 50%;
+}
+
+/* Form CSS */
+.form {
+    float: right;
+    width: 50%; 
+}
+
+.form__container {
+    padding: 20px;
+    color: #445D48;
+    background-color: #d6cc99;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.form__card form {
+    margin: 0;
+}
+
+.form__card label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form__card input,
+.form__card select,
+.form__card textarea {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #d6cc99;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+.form__card textarea {
+    height: 100px;
+    font-size: medium;
+}
+
+.form__card button {
+    padding: 10px 20px;
+    background-color: #445D48;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.form__card button:hover {
+    background-color: #445D48;
+}
+
+
+/* Footer CSS */
+footer {
+    position: fixed;
+    color: #445D48;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 17px
+}
+
+.footer__links a:hover {
+    color: #5E3023;
+    transition: 0.3s ease-out;
+}
+
+@media screen and (max-width: 480px) {
+    .footer__links {
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}

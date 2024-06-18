@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellafreo Golf</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <img src="/images/bellagolfwhitelogo.png" alt="Logo" class="Logo">
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/play.html" class="navbar__links">Play</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/learn.html" class="navbar__links">Learn</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/contact_us.html" class="button">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<body>
+    <!-- Contact Us Section -->
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        
+        <div class="contact-info">
+            <h3>Contact</h3>
+            <ul>
+                <li><strong>Phone:</strong> (08) 8088-8088</li>
+                <li><strong>Email:</strong> info@bellafreogolf.com.au</li>
+                <li><strong>Address:</strong> 1335 Saitama Street, Fremantle WA 6160</li>
+            </ul>
+        </div>
+
+        <div class="opening-hours">
+            <h3>Opening Hours</h3>
+            <ul>
+                <li><strong>Summer:</strong> 6:00 AM - 6:00 PM</li>
+                <li><strong>Winter:</strong> 6:00 AM - 7:00 PM</li>
+            </ul>
+        </div>
+        
+        <div class="terms">
+            <h3>Terms and Conditions</h3>
+            <p>Non-refundable reservations, exceptions with valid documentation only. Refund requests must be made in writing and are subject to management approval.</p>
+        </div>
+    </div>
+    
+    <div class="form">
+        <div class="form__container">
+            <div class="form__card">
+                <form method="POST">
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g., +041-333-333" required>
+                    </div>
+                    <div>
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    </div>
+                    <div>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+                    </div>
+                    <div>
+                        <label for="enquiry-type">Enquiry Type</label>
+                        <select id="enquiry-type" name="enquiry-type">
+                            <option value="playGolf">Play Golf</option>
+                            <option value="learnGolf">Learn Golf</option>
+                            <option value="groupBooking">Group Booking</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option> 
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your enquiry..." required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy;2024 Bellafreo Golf</p>
+</footer>
+
+<script src="app.js"></script>
+</html>
